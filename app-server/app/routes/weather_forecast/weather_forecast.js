@@ -22,15 +22,15 @@ module.exports = function(app) {
                 res.send(response);
             })
             .catch(function(err) {
-               	res.send(err); 
+				var errResponse = err.response.body;
+               	res.send(JSON.parse(errResponse).message); 
             })
     });
 	app.get('/locations',function(req,res){
-		if(api.key){
+		if(api.locations){
 			res.send(api.locations);
-		}res.send("err: Locations not found")
+		}else res.send("err: Locations not found")
 	})
 	
-
 };
 
