@@ -4,16 +4,17 @@
  */
 "use strict";
 const request  = require('request-promise');
-const  apiKey   = require( '../../../config/weatherAPI' );
+const api      = require( '../../../config/weatherAPI' );
 
 module.exports = function(app) {
 	var requiredHeaders = {
 		'User-Agent': 'Request-Promise',
+		'x-api-key' : api.key
 	}
     app.get('/weatherInfo', function(req, res) {
         const options = {
             method: 'GET',
-            uri: `http://api.openweathermap.org/data/2.5/weather?q=${req.query.id}&appid=${apiKey.key}`,
+            uri: `http://api.openweathermap.org/data/2.5/weather?q=${req.query.id}`,
             headers: requiredHeaders
         }
         request(options)
@@ -24,6 +25,12 @@ module.exports = function(app) {
                	res.send(err); 
             })
     });
+	app.get('/locations',function(req,res){
+		if(api.key){
+			res.send(api.locations);
+		}res.send("err: Locations not found")
+	})
+	
 
 };
 

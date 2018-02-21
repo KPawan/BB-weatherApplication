@@ -4,5 +4,6 @@
  */
 
 module.exports = {
-	key : '1c51eaef6a2452e8aeb1a2662c16e5ce'
+	key : '1c51eaef6a2452e8aeb1a2662c16e5ce',
+	locations : ['Germany','London','Belgium','Nederland','Italy']
 };
