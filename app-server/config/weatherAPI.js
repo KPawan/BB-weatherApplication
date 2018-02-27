@@ -40,7 +40,7 @@ module.exports = {
 				borderWidth: 1
 			}
 		]
-  		},
+		},
 		options: {
 			scales: {
 				yAxes: [{
@@ -56,6 +56,6 @@ module.exports = {
 					}
 				}]		
 			}
-  	}
+		}
 	}
 };
