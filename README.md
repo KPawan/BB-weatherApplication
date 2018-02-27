@@ -17,7 +17,7 @@ Clone repository: https://github.com/KPawan/BB-weatherApplication.git
 #app-server: To create and expose API's to client side
 
 	Under folder app-server, run following command
-
+		npm install      --  Load all node modules
 		npm start        -- It will run node server on localhost:7000
 
 #weather-forecast-app: 
