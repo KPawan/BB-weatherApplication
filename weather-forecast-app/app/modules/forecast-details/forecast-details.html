@@ -1,10 +1,10 @@
-<div class="row">
+<div class="container">
 	<h2 class="panel-title"> Weather-forecasts in your city {{$ctrl.forecast.name}}, {{$ctrl.forecast.sys.country}}</h2>
 	<div class="panel-layout">
 		<div class="panel-current-weather col-sm-4 col-xs-12">
 			<h2 class="current-weather-location">{{$ctrl.forecast.name}}, {{$ctrl.forecast.sys.country}}</h2>
 			<h3 class="current-weather-temperature">
-				<img ng-src="{{$ctrl.getIconImageUrl($ctrl.forecast.weather[0].icon)}}" /> {{$ctrl.forecast.weather[0].description}}
+				<img ng-src="{{$ctrl.getIconImageUrl($ctrl.forecast.weather[0].icon)}}" /> {{$ctrl.forecast.main.temp}}&#176;C  {{$ctrl.forecast.weather[0].description}}
 			</h3>
 			<table class="table">
 			  <tbody>
