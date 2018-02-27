@@ -23,7 +23,9 @@ function WeatherForecastCtrl(openWeatherMap, $state, $timeout){
 		)
 	}
 	self.navigateTo = function(item, isocode){
-		$state.go('forecast',{location:item+','+isocode});
+		$timeout(function(){
+			$state.go('forecast',{location:item+','+isocode});
+		},0)
 	}
 	self.setLocations = function(loc){
 		self.locations = loc.locations;
