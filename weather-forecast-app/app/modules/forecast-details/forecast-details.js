@@ -9,7 +9,7 @@ function ForecastCtrl(openWeatherMap, $stateParams){
 	var self = this;
 	self.iconBaseUrl = 'http://openweathermap.org/img/w/';
 	self.$onInit = function $onInit() {
-    	self.getWeatherForecast($stateParams.location);		
+  	self.getWeatherForecast($stateParams.location);		
 	};
 
 	self.getWeatherForecast = function(location){
@@ -38,15 +38,13 @@ function ForecastCtrl(openWeatherMap, $stateParams){
 	
 	self.getChartData = function(id){
 		openWeatherMap.hourlyForecastInfo.get({'id': id}).$promise.then(
-			function( response ){
-					
+			function( response ){	
 				var ctx = document.getElementById('chartJSContainer').getContext('2d');
 				new Chart(ctx, response);
 			},
 			function( error ){
 				return error;
-			}
-			
+			}	
 		)
 	};
 			

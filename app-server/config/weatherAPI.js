@@ -25,37 +25,37 @@ module.exports = {
 		}]
 	},
 	chartModel : {
-	  	type: 'line',
-	  	data: {
-			labels: [],
-			datasets: [
-				{
-					label: '',
-					data: [],
-					borderWidth: 1
-				},	
-				{
-					label: '',
-					data: [],
-					borderWidth: 1
-				}
-			]
-	  		},
-			options: {
-				scales: {
-					yAxes: [{
-						ticks: {
-							reverse: false,
-							autoSkip: false
-						}
-					}],
-					xAxes: [{
-						ticks: {
-							reverse: false,
-							autoSkip: false
-						}
-					}]		
-				}
-		  	}
-		}
+  	type: 'line',
+  	data: {
+		labels: [],
+		datasets: [
+			{
+				label: '',
+				data: [],
+				borderWidth: 1
+			},	
+			{
+				label: '',
+				data: [],
+				borderWidth: 1
+			}
+		]
+  		},
+		options: {
+			scales: {
+				yAxes: [{
+					ticks: {
+						reverse: false,
+						autoSkip: false
+					}
+				}],
+				xAxes: [{
+					ticks: {
+						reverse: false,
+						autoSkip: false
+					}
+				}]		
+			}
+  	}
+	}
 };

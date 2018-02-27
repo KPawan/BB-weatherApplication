@@ -1,6 +1,5 @@
 <div class="locationContainer container">
-    <h2 class="panel-title"> Weather Forecast : Choose your city </h2>
-
+  <h2 class="panel-title"> Weather Forecast : Choose your city </h2>
 	<div class="box-container" ng-repeat="item in $ctrl.locations">
 		<div class="col-xs-12 col-sm-4 box">
 			<a href="#forecastDetails" class="bgImage" ng-click="$ctrl.navigateTo(item.name, item.isoCode)">

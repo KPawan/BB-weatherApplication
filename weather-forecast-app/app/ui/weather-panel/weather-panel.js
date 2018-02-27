@@ -11,8 +11,7 @@ module.exports = function(ngModule){
       },
       templateUrl: './app/ui/weather-panel/weather-panel.html',
       controllerAs: 'vm',
-      controller: weatherPanelCtrl
-      
+      controller: weatherPanelCtrl 
     }
   })
 };

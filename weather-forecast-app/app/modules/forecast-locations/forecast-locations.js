@@ -9,8 +9,7 @@ function WeatherForecastCtrl(openWeatherMap, $state, $timeout){
 	var self = this
 	self.iconBaseUrl = 'http://openweathermap.org/img/w/';
 	self.$onInit = function $onInit() {
-	    
-	    self.getLocations();		
+		self.getLocations();		
 	};
 	self.getLocations= function(){	
 		openWeatherMap.locations.get({'path':'locations'}).
@@ -24,12 +23,8 @@ function WeatherForecastCtrl(openWeatherMap, $state, $timeout){
 		)
 	}
 	self.navigateTo = function(item, isocode){
-		$timeout(function() {
-  			$state.go('forecast',{location:item+','+isocode});
-		}, 0);
-
+		$state.go('forecast',{location:item+','+isocode});
 	}
-	
 	self.setLocations = function(loc){
 		self.locations = loc.locations;
 	}
