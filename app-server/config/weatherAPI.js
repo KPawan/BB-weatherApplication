@@ -1,6 +1,7 @@
 /* Created by pawan koul on 19-02-2018.
- * Keep WeatherAPI key separate and put it in git ignore for outsiders
- * 
+ * Keep WeatherAPI key separate and put it in git ignore for outsiders 
+ * Keep static locations list in config for easy change in the list
+ * Keep Chart Model separate to configure the options easily
  */
 
 module.exports = {
@@ -24,37 +25,37 @@ module.exports = {
 		}]
 	},
 	chartModel : {
-				  type: 'line',
-				  data: {
-					labels: [],
-					datasets: [
-						{
-							label: '',
-							data: [],
-							borderWidth: 1
-						},	
-							{
-								label: '',
-								data: [],
-								borderWidth: 1
-							}
-						]
-				  },
-				  options: {
-					scales: {
-						yAxes: [{
-							ticks: {
-								reverse: false,
-								autoSkip: false
-							}
-						}],
-						xAxes: [{
-							ticks: {
-								reverse: false,
-								autoSkip: false
-							}
-						}]		
-					}
-				  }
+	  	type: 'line',
+	  	data: {
+			labels: [],
+			datasets: [
+				{
+					label: '',
+					data: [],
+					borderWidth: 1
+				},	
+				{
+					label: '',
+					data: [],
+					borderWidth: 1
 				}
+			]
+	  		},
+			options: {
+				scales: {
+					yAxes: [{
+						ticks: {
+							reverse: false,
+							autoSkip: false
+						}
+					}],
+					xAxes: [{
+						ticks: {
+							reverse: false,
+							autoSkip: false
+						}
+					}]		
+				}
+		  	}
+		}
 };

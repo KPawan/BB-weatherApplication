@@ -1,6 +1,6 @@
 /* Created by pawan koul on 19-02-2018.
  * 
- * 
+ * Use Cors for Cross domain issue locally id client is not running on server
  */
  
 const express        = require('express');
