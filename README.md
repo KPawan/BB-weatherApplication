@@ -4,16 +4,16 @@ Component based angular 1.5 weather app example\
 #project setup
 
 Technologies used:\
-#Server                    |  #Client
-:-------------------------:|:-------------------------:
 
-Node					   | webpack  
-Express					   | Angular 1.5  						                 							
-
-:-------------------------:|:-------------------------:
+| #Server       | #Client       |
+| ------------- | ------------- |
+| Node          | webpack       |
+| Express       | Angular 1.5   |
+                    
 							  	
 #Steps to set up the project locally\
-Clone repository: https://github.com/KPawan/BB-weatherApplication.git\
+Clone repository: https://github.com/KPawan/BB-weatherApplication.git
+\
 #app-server: To create and expose API's to client side\
 
 	Under folder app-server, run following commands,
