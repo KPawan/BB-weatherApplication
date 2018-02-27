@@ -1,0 +1,73 @@
+<div class="row">
+	<h2 class="panel-title"> Weather-forecasts in your city {{$ctrl.forecast.name}}, {{$ctrl.forecast.sys.country}}</h2>
+	<div class="panel-layout">
+		<div class="panel-current-weather col-sm-4 col-xs-12">
+			<h2 class="current-weather-location">{{$ctrl.forecast.name}}, {{$ctrl.forecast.sys.country}}</h2>
+			<h3 class="current-weather-temperature">
+				<img ng-src="{{$ctrl.getIconImageUrl($ctrl.forecast.weather[0].icon)}}" /> {{$ctrl.forecast.weather[0].description}}
+			</h3>
+			<table class="table">
+			  <tbody>
+				<tr>
+				  
+				  <td>Minimum Temprature</td>
+				  <td>{{$ctrl.forecast.main.temp_min}}&#176;C </td>
+				  
+				</tr>
+				<tr>
+				  
+				  <td>maximum Temprature</td>
+				  <td>{{$ctrl.forecast.main.temp_max}}&#176;C </td>
+				  
+				</tr>
+				<tr>
+				  
+				  <td>Average Temprature</td>
+				  <td>{{($ctrl.forecast.main.temp_max + $ctrl.forecast.main.temp_min )/2 }}&#176;C </td>
+				  
+				</tr>
+				<tr>
+				  
+				  <td>Humidity</td>
+				  <td>{{$ctrl.forecast.main.humidity}}%</td>
+				  
+				</tr>
+				<tr>
+				  
+				  <td>Wind Speed</td>
+				  <td>{{$ctrl.forecast.wind.speed}} m/s</td>
+				  
+				</tr>
+				
+			  </tbody>
+			</table>		
+		</div>
+		<div class="panel-forecast-details col-sm-8 col-xs-12" ng-cloak> 
+			<canvas id="chartJSContainer" width="600" height="400"></canvas>
+		</div>
+		<div class="">
+				<h3 class="panel-title">5 days weather forecast</h3>
+				
+				<div class="">
+					<div class="col-xs-12">
+						<div weather-panel="$ctrl.dailyForecast" show-entry="$ctrl.dailyForecast.list[0]"></div>
+					</div>
+					<div class="col-xs-12">
+						<div weather-panel="$ctrl.dailyForecast" show-entry="$ctrl.dailyForecast.list[1]"></div>
+					</div>
+					<div class="col-xs-12">
+						<div weather-panel="$ctrl.dailyForecast" show-entry="$ctrl.dailyForecast.list[2]"></div>
+					</div>
+					<div class="col-xs-12">
+						<div weather-panel="$ctrl.dailyForecast" show-entry="$ctrl.dailyForecast.list[3]"></div>
+					</div>
+					<div class="col-xs-12">
+						<div weather-panel="$ctrl.dailyForecast" show-entry="$ctrl.dailyForecast.list[4]"></div>
+					</div>
+				</div>
+			</div>
+		
+	</div>
+</div>
+
+

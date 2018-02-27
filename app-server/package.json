@@ -17,7 +17,7 @@
 		"cors": "^2.8.4"
 	},
 	"devDependencies":{
-		"gulp":"^3.9.1"
+		"gulp": "^3.9.1"
 	},
 	"keywords": [],
 	"author": "Pawan Koul <pawankoul@outlook.com>",

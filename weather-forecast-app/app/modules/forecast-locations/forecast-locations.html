@@ -1,0 +1,12 @@
+<div class="locationContainer container">
+	<div class="box-container" ng-repeat="item in $ctrl.locations">
+		<div class="col-xs-12 col-sm-4 box">
+			<a href="#forecastDetails" class="bgImage" ng-click="$ctrl.navigateTo(item.name, item.isoCode)">
+				<div class="tile">
+					<img ng-src='./app/style/img/{{item.name}}.jpg' class="img-responsive tileImg">
+					<h3 class="title">{{item.name}}</h3>
+				</div>
+			</a>
+		</div>
+	</div>  
+</div>

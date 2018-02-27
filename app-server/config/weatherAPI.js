@@ -4,6 +4,57 @@
  */
 
 module.exports = {
-	key : '1c51eaef6a2452e8aeb1a2662c16e5ce',
-	locations : {"locations": ["Germany", "London", "Belgium", "Nederland", "Italy"]}
+	key : '279b4be6d54c8bf6ea9b12275a567156',
+	locations : {
+		"locations": [{
+			"name": "Paris",
+			"isoCode": "fr"
+		}, {
+			"name": "London",
+			"isoCode": "gb"
+		}, {
+			"name": "Berlin",
+			"isoCode": "de"
+		}, {
+			"name": "Rome",
+			"isoCode": "it"
+		}, {
+			"name": "Amsterdam",
+			"isoCode": "ned"
+		}]
+	},
+	chartModel : {
+				  type: 'line',
+				  data: {
+					labels: [],
+					datasets: [
+						{
+							label: '',
+							data: [],
+							borderWidth: 1
+						},	
+							{
+								label: '',
+								data: [],
+								borderWidth: 1
+							}
+						]
+				  },
+				  options: {
+					scales: {
+						yAxes: [{
+							ticks: {
+								reverse: false,
+								autoSkip: false
+							}
+						}],
+						xAxes: [{
+							ticks: {
+								reverse: false,
+								autoSkip: false
+							}
+						}]		
+					}
+				  }
+				}
 };
